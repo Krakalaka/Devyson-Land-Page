@@ -4,6 +4,7 @@
 @import url('./about.css');
 @import url('./gallery.css');
 @import url('./services.css');
+@import url('./contact.css');
 
 :root {
     --primary-color_-9: #040507;
