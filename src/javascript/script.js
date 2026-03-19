@@ -32,3 +32,10 @@ function automaticSlide() {
 
 let galleryIndex = 1;
 automaticSlide();
+
+
+
+//## POPUP SECTION
+document.querySelector("#popup .close-btn").addEventListener("click", function() {
+    document.getElementById("popup").classList.remove("active");
+});
