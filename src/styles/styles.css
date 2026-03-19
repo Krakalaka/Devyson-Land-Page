@@ -5,6 +5,8 @@
 @import url('./gallery.css');
 @import url('./services.css');
 @import url('./contact.css');
+@import url('./location.css');
+@import url('./faq-questions.css');
 
 :root {
     --primary-color_-9: #040507;
