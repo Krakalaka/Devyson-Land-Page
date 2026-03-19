@@ -1,0 +1,126 @@
+header {
+    background-color: var(--primary-color_0);
+
+    position: fixed;
+    top     : 0    ;
+    z-index : 101  ;
+
+    width  : 100%   ;
+    padding: 14px 4%;
+
+    display        : flex         ;
+    align-items    : center       ;
+    justify-content: space-between;
+
+    box-shadow      : var(--box-shadow-1)   ;
+}
+
+nav {
+    display        : flex        ;
+    align-items    : center      ;
+    justify-content: space-around;
+}
+
+header .logo {
+    cursor     : default;
+    user-select: none   ;
+}
+
+header .logo img {
+    width : 70px;
+    height: auto;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+header .menu {
+    display   : flex;
+    list-style: none;
+    gap       : 48px;
+}
+
+header .item a {
+    color          : white;
+    font-weight    : 500  ;
+    opacity        : .8   ;
+    text-decoration: none ;
+
+    transition: opacity .3s ease;
+}
+
+header .item a:hover {
+    opacity: 1;
+
+    text-decoration          : underline               ;
+    text-decoration-color    : var(--secondary-color_2);
+    text-decoration-thickness: 2px                     ;
+    text-underline-offset    : 4px                     ;
+}
+
+header .btn { margin-left: 64px; }
+
+header .btn:hover { transform: scale(1.1); }
+
+.mobile-menu-btn {
+    margin : auto 0 ;
+    display: none   ;
+    cursor : pointer;
+}
+
+.mobile-menu-btn div {
+    background-color: white;
+
+    width : 35px;
+    height: 3px ;
+
+    margin       : 9px 0;
+    border-radius: 1.5px;
+
+    transition: .4s ease;
+}
+
+.open .bar1 {
+    translate        : 0 12px        ;
+    -webkit-transform: rotate(-45deg);
+    transform        : rotate(-45deg);
+}
+
+.open .bar2 { opacity: 0; }
+
+.open .bar3 {
+    translate        : 0 -12px      ;
+    -webkit-transform: rotate(45deg);
+    transform        : rotate(45deg);
+}
+
+.open .mobile-menu {
+    display       : flex  ;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.mobile-menu {
+    background-color: var(--primary-color_0);
+
+    display   : none;
+    list-style: none;
+
+    position: absolute;
+    top     : 102px   ;
+    left    : 0       ;
+
+    width: 100%;
+}
+
+.mobile-menu .item { margin-bottom: 16px; }
+
+@media only screen and (max-width: 1170px) {
+    nav,
+    .nav-btn { display: none; }
+
+    .mobile-menu-btn { display: block; }
+}
